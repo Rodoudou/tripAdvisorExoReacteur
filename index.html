@@ -337,7 +337,7 @@
       <aside>
         <div class="explore">
           <h3>Explorez Paris</h3>
-          <img src="/assets/img/tour-eiffel.jpg" alt="Tour Eiffel" />
+          <img src="/assets/img/comedie-tour-eiffel.jpg" alt="Tour Eiffel" />
           <ul>
             <li>Hébergements</li>
             <li><a href="#">Hôtels familiaux</a></li>
@@ -361,6 +361,31 @@
     </main>
     <div class="modal hidden">
       <div><i class="icon-large icon-times" onclick="switchModal()"></i></div>
+      <div class="formulaire">
+        <for action="/"method="post">
+          <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="user_name" placeholder="Name" />
+          </div>
+          <div>
+            <label for="mail">e-mail :</label>
+            <input type="email" id="mail" name="user_mail" placeholder="mail" />
+          </div>
+          <div>
+            <label>Object :</label>
+            <input type="text" name="obj" placeholder="Objet du message" />
+          </div>
+          <div>
+            <label for="msg">Message :</label>
+            <textarea
+              id="msg"
+              name="user_message"
+              placeholder="ici votre message"
+            ></textarea>
+          </div>
+          <button style=" color: white;background-color: #5C4AD3;" type="submit">ENVOYER !</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
