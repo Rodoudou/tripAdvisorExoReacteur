@@ -18,7 +18,7 @@ router.post("/user/sign_up", async (req, res) => {
   console.log("body 1ere route user/sign_up => ", body);
 
   try {
-    if (!body.username) {
+    if (!body.name) {
       res.json({
         error: "Username non renseigné!"
       });
@@ -35,11 +35,12 @@ router.post("/user/sign_up", async (req, res) => {
       });
     } else {
       const newUser = new User({
+        name: body.name,
         email: body.email,
+        object: body.object,
         token,
         salt,
-        hash,
-        name: body.name
+        hash
       });
 
       console.log("data newUser avant le save() =>", newUser);
@@ -48,8 +49,8 @@ router.post("/user/sign_up", async (req, res) => {
       return res.json({
         _id: newUser._id,
         token: newUser.token,
-        email: newUser.email,
-        name: newUser.name
+        name: newUser.name,
+        email: newUser.email
       });
     }
   } catch (error) {

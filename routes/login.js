@@ -31,8 +31,7 @@ router.post("/user/log_in", async (req, res) => {
         return res.json({
           _id: user._id,
           token: user.token,
-          email: user.email,
-          password: user.password
+          email: user.email
         });
       } else {
         // sinon, il n'est pas autorisé à se connecter
