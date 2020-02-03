@@ -9,10 +9,10 @@ const SHA256 = require("crypto-js/sha256");
 const encBase64 = require("crypto-js/enc-base64");
 const randomString = uid2(16);
 
-router.get("/", (req, res) => {
+/* router.get("/", (req, res) => {
   console.log(req.query);
   res.json(req.query);
-});
+}); */
 
 //route  login
 router.post("/user/log_in", async (req, res) => {
